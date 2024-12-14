@@ -1,0 +1,47 @@
+services:
+  # Servicio para MariaDB
+  db:
+    image: mariadb:11.5.2-ubi9
+    env_file:
+      - ./.env
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}    # Contraseña del root
+      MARIADB_DATABASE: ${MARIADB_DATABASE}              # Nombre de la base de datos
+    volumes:
+      - mariadb_data:/var/lib/mysql                  # Volumen persistente
+    ports:
+      - "3310:3306"                                  # Exponer el puerto 3306
+    networks:
+      - spacecandy
+
+  # Servicio para Django
+  backend:
+    build: ./django                                  # Dockerfile de Django
+    volumes:
+      - ./django:/usr/src/app                                 # Sincronizar el código entre host y contenedor
+    ports:
+      - "8000:8000"                                  # Exponer el puerto 8000
+    depends_on:
+      - db                                             # Esperar a que MariaDB esté disponible
+    environment:
+      - DATABASE_URL=mysql://root:${MARIADB_ROOT_PASSWORD}@db:3306/${MARIADB_DATABASE}  # URL de la DB
+    networks:
+      - spacecandy
+
+  frontend:
+    build: ./react
+    volumes:
+      - ./react:/usr/src/app
+    ports:
+      - "5173:5173"  
+    networks:
+      - spacecandy
+
+# Volúmenes para persistencia de datos
+volumes:
+  mariadb_data:
+
+# Redes para comunicación entre los contenedores
+networks:
+  spacecandy:
+    driver: bridge
