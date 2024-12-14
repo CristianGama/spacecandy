@@ -1,0 +1,265 @@
+.back-categories {
+    position: absolute;
+    z-index: 10;
+    top: 630px;
+    left: 30px;
+    color: white;
+    font-size: 50px;
+    background-color: rgba(0, 223, 252, 0.3);
+    border: 2px solid rgb(0, 99, 165);
+    font-family: 'Arial';
+    text-shadow: 
+    2px 2px 0px rgb(0, 99, 165),
+    -2px -2px 0px rgb(0, 99, 165),
+    2px -2px 0px rgb(0, 99, 165),
+    -2px 2px 0px rgb(0, 99, 165);
+    transform: translateX(-250px);
+    animation: moverBack 0.5s ease-in-out 1.5s forwards;
+}
+
+.back-categories:hover {
+    cursor: pointer;
+}
+
+.main-menu{
+    height: 100vh;
+    width:100vw;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.menu {
+    height: 85%;
+    width: 60%;
+}
+
+.title {
+    margin-top: 50px;
+    width: 100%;
+    height: 20%;
+    transform: translateY(-165px);
+    animation: moverTitle 0.5s ease-in-out 1.5s forwards;
+}
+
+.title h3 {
+    width: 100%;
+    height: 45%;
+    padding-top: 0%;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 223, 252, 0.3);
+    border: 2px solid rgb(0, 99, 165);
+    box-sizing: border-box;
+    font-family: 'Arial';
+    text-shadow: 
+    2px 2px 0px rgb(0, 99, 165),
+    -2px -2px 0px rgb(0, 99, 165),
+    2px -2px 0px rgb(0, 99, 165),
+    -2px 2px 0px rgb(0, 99, 165);
+}
+
+.products {
+    width: 100%;
+    height: 80%;
+    margin-top: -50px;
+    background-color: rgba(0, 223, 252, 0.3);
+    border: 2px solid rgb(0, 99, 165);
+    box-sizing: border-box;
+    font-family: 'Arial';
+    text-shadow: 
+    2px 2px 0px rgb(0, 99, 165),
+    -2px -2px 0px rgb(0, 99, 165),
+    2px -2px 0px rgb(0, 99, 165),
+    -2px 2px 0px rgb(0, 99, 165);
+    transform: translateY(590px);
+    animation: moverProducts 0.5s ease-in-out 1.5s forwards;
+    display: grid;
+    grid-template-columns: 15.5% 15.5% 15.5% 15.5% 15.5% 15.5%;
+    grid-template-rows:180px 180px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.product {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 46% 13% 22% 9% 10%;
+    font-family: 'Arial';
+    color: black;
+    text-shadow: none;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.product .name {
+    width: 100%;
+    background-color:rgba(0, 255, 234, 0.7);
+    height: 100%;
+    font-size: 10.5px;
+}
+.product .price {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+.product .description {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 99, 163, 0.7);
+    font-size: 11px;
+}
+.product img {
+    width: 100%;
+    height: 100%;
+}
+
+.product button {
+    height: 100%;
+    background-color: green;
+    color: white;
+    border: 0px solid black;
+}
+
+.product button:hover {
+    background-color:cadetblue;
+    cursor: pointer;
+}
+
+.estrella {
+    position: absolute;
+    z-index: 1;
+}
+
+#estrella-1 {
+    top: 250px;
+    left: -200px;
+}
+
+#estrella-2 {
+    top: -210px;
+    right: 150px;
+}
+#estrella-3 {
+    top: 500px;
+    right: -200px;
+}
+
+.estrella-1-unhide {
+    animation: moverEstrella1 0.5s ease-in-out 1.5s forwards;
+}
+
+.estrella-2-unhide {
+    animation: moverEstrella2 0.5s ease-in-out 1.5s forwards;
+}
+.estrella-3-unhide {
+    animation: moverEstrella3 0.5s ease-in-out 1.5s forwards;
+}
+
+.zoom-explosiones-picosas {
+    animation: zoom-planeta1 1s ease-in-out forwards;
+}
+
+.zoom-acidos-intergalacticos {
+    animation: zoom-planeta2 1s ease-in-out forwards;
+}
+
+.zoom-dulces-galacticos {
+    animation: zoom-planeta3 1s ease-in-out forwards;
+}
+.zoom-gomitas-cosmicas {
+    animation: zoom-planeta4 1s ease-in-out forwards;
+}
+
+.zoom-snacks-espaciales {
+    animation: zoom-planeta5 1s ease-in-out forwards;
+}
+
+@keyframes moverTitle{
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes moverProducts{
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moverBack{
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moverEstrella1{
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes moverEstrella2{
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes moverEstrella3{
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+
+
+@keyframes zoom-planeta1{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: scale(4) translateX(450px);
+
+    }
+}
+@keyframes zoom-planeta2{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: scale(4) translateX(230px);
+
+    }
+}
+@keyframes zoom-planeta3{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: scale(4) translateX(0px);
+
+    }
+}
+
+@keyframes zoom-planeta4{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: scale(4) translateX(-230px);
+
+    }
+}
+
+@keyframes zoom-planeta5{
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: scale(4) translateX(-460px);
+
+    }
+}

@@ -1,0 +1,37 @@
+.shopping-confirmation{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shopping-confirmation-central {
+    background-color: rgba(13, 137, 153, 0.9);
+    border: 2px solid rgb(0, 99, 165);
+    width: 60vw;
+    height: 80vh;
+    z-index: 15;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shopping-confirmation-title{
+    color: white;
+}
+
+.shopping-confirmation-inputs{
+}
+
+.shopping-confirmation-inputs h3{
+}
+
+.shopping-confirmation-inputs input{
+    width: 100%;
+}
+
+.shopping-confirmation-button{
+}

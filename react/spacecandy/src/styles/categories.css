@@ -1,0 +1,301 @@
+.logotipo2 {
+    position: absolute;
+    width: 250px;
+    top: 200px;
+    left: -600px;
+    animation: moverLogo 0s ease-in-out forwards, moverLogo2 0s ease-in-out forwards;
+    z-index: 10;
+}
+
+footer {
+    width: 100vw;
+    height: 8vh;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+}
+
+footer ul {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+footer li {
+    list-style-type: none;
+    width: 20%;
+    color: white;
+}
+
+.social{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+footer li img {
+    width: 40px;
+}
+footer li img:hover {
+    width: 55px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.footer-section{
+    text-align: center;
+    font-size: 18px;
+}
+.footer-section:hover{
+    font-size: 22px;
+    transition: 0.1s;
+    cursor: pointer;
+    color: yellow;
+}
+
+nav {
+    width: 100vw;
+    height: 12vh;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.cohete {
+    position: absolute;
+    width: 180%;
+    height: 168%;
+    transform: translate(-100px, -300px);
+    z-index: -10;
+    opacity: 0.5;
+
+}
+
+nav ul {
+    height: 100%;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+nav li {
+    list-style-type: none;
+    padding-left: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+nav li:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+nav img {
+    width: 5vw;
+}
+
+.shopping-car {
+    position: absolute;
+    width: 18vw;
+    height: 98vh;
+    margin-top: 0.5vh;
+    right: 0;
+    z-index: 10;
+    transition: 0.3s;
+    top: 0;
+    transform: translateX(300px);
+
+}
+
+.shopping-car h1 {
+    width: 80%;
+    color: white;
+    text-align: center;
+    padding: 6.5% 0px 1%;
+    margin-left: 10%;
+    border-bottom: 2px solid white;
+}
+
+.shopping-car h3 {
+    color: white;
+    margin: 3%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.shopping-car button {
+    color: white;
+    border: 2px solid white;
+    width: 80%;
+    background-color: green;
+    margin-left: 2vw;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shopping-car button:hover {
+    cursor: pointer;
+}
+
+.open-shopping {
+    transform: translateX(0px);
+}
+
+.shopping-car-products{
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.shopping-car-product {
+    width: 80%;
+    border-left: 2px solid white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 3px;
+}
+.shopping-car-product h3 {
+    font-size: 20px;
+    color:white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: 0;
+}
+.shopping-car-product h4 {
+    font-size: 15px;
+    color: white;
+}
+
+.shopping-car-product button {
+    font-size: 15px;
+    color: white;
+    font-weight:normal;
+}
+
+.container-main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: moverPlanetas 1.35s ease-in-out forwards;
+    transform: translateY(500px);
+}
+
+.container-categories {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    z-index: 1;
+}
+
+.category {
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 90% 10%;
+}
+
+.category h1 {
+    color: white;
+    font-size:25px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial';
+}
+
+.category h1:hover {
+    color: rgb(255, 255, 0);
+    cursor:pointer;
+}
+
+.image-container {
+    width: 100%;                     
+    height: 100%;                    
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.neptuno {
+    animation: planetas 1s ease-in-out infinite alternate;
+}
+
+.saturno {
+    animation: planetas 3s ease-in-out infinite alternate;
+}
+
+.tierra {
+    animation: planetas 2.3s ease-in-out infinite alternate;
+}
+
+.marte {
+    animation: planetas 1.5s ease-in-out infinite alternate;
+}
+
+.venus {
+    animation: planetas 1s ease-in-out infinite alternate;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+
+
+@keyframes planetas {
+    100% {
+        transform: translateY(10px);;
+    }
+}
+
+@keyframes moverPlanetas {
+    0% {
+        transform: translateY(500px);;
+    }
+    100% {
+        transform: translateY(0px);;
+    }
+}
+
+@keyframes moverLogo{
+    100% {
+        transform: translateX(700px);
+    }
+}
+
+@keyframes moverLogo2{
+    100% {
+        width: 250px;
+        transform: translate(620px, -180px);
+    }
+}
